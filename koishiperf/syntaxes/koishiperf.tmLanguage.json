@@ -1,0 +1,73 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "koishi perf",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#declare-chain"
+    },
+    {
+      "include": "#strings"
+    }
+  ],
+  "repository": {
+    "declare-chain": {
+      "patterns": [
+        {
+          "match": "\\b(chain|source)\\b",
+          "name": "variable.other.constant"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "match": "\\b(yaml|json)\\b",
+          "name": "support.type"
+        },
+        {
+          "name": "keyword.control",
+          "match": "\\b(if|while|for|return)\\b"
+        },
+        {
+          "match": "\\b(default|protected|enabled)\\b",
+          "name": "storage.modifier"
+        },
+        {
+          "match": "\\b(chain|source)\\b",
+          "name": "variable.other.constant"
+        },
+        {
+          "match": "\\b(drop)\\b",
+          "name": "keyword.control.flow"
+        },
+        {
+          "match": "\\b(\\>)\\b",
+          "name": "keyword.operator"
+        },
+        {
+          "match": "\\b(:)\\b",
+          "name": "keyword.operator"
+        },
+        {
+          "match": "\\>",
+          "name": "keyword.control.flow"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape",
+          "match": "\\\\."
+        }
+      ]
+    }
+  },
+  "scopeName": "source.koishiperf"
+}

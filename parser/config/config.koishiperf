@@ -1,0 +1,22 @@
+default chain {
+  @koishijs/plugin-manager
+  koishi-plugin-mongo
+  koishi-plugin-yas
+}
+
+enabled chain public {
+ another-plugin yaml {
+what:
+  - should-work
+ }
+  third-plugin
+  koishi-plugin-3 {
+    "location":"http://localhost"
+  }
+}
+
+
+source guild:onebot:"123456" >> public >> d
+
+source user:q:1223 >> drop 
+source ^user:onebot:4444 >> public

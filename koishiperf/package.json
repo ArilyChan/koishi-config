@@ -1,0 +1,25 @@
+{
+    "name": "koishiperf",
+    "displayName": "koishiperf",
+    "description": "koishi perf",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.65.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "koishiperf",
+            "aliases": ["koishi perf", "koishiperf"],
+            "extensions": [".koishiperf"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "koishiperf",
+            "scopeName": "source.koishiperf",
+            "path": "./syntaxes/koishiperf.tmLanguage.json"
+        }]
+    }
+}
